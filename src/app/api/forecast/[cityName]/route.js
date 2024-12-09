@@ -5,7 +5,7 @@ const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 const URL_API = process.env.URL_API;
 
 export async function GET(req, { params }) {
-  const { cityName } = params;
+  const { cityName } = await params;
 
   if (!cityName || typeof cityName !== 'string' || cityName.trim().length === 0) {
     return NextResponse.json(

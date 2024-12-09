@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const DailyForecast = ({ weatherData }) => {
     const URL_IMG = process.env.NEXT_PUBLIC_URL_IMG;
 
@@ -22,10 +24,12 @@ const DailyForecast = ({ weatherData }) => {
                     </div>
                     {mainIcon && (
                     <div className="w-[50px] lg:w-[70px] flex justify-center">
-                        <img
+                        <Image
                             src={`${URL_IMG}/${mainIcon}@2x.png`}
                             alt="Ícono del clima"
-                            className="lg:w-14 lg:h-14"
+                            width={40}
+                            height={40}
+                            className="w-auto h-auto"
                         />
                     </div>
                     )}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const HourlyForecast = ({weatherData}) => {
     const URL_IMG = process.env.NEXT_PUBLIC_URL_IMG;
 
@@ -10,11 +12,13 @@ const HourlyForecast = ({weatherData}) => {
                 <div key={index} className="px-3 lg:px-4 flex flex-col items-center justify-center border-r border-gray-800">
                     <p className="text-md font-bold text-gray-300">{forecast.hora.slice(0,2)}hs</p>
                     {forecast.icon && (
-                    <img
-                        src={`${URL_IMG}/${forecast.icon}.png`}
-                        alt="Ícono del clima"
-                        className="h-14 w-14"
-                    />
+                    <Image
+                    src={`${URL_IMG}/${forecast.icon}@2x.png`}
+                    alt="Ícono del clima"
+                    width={40}
+                    height={40}
+                    className="w-auto h-auto"
+                     />
                     )}
                     <p className="md:text-lg lg:text-xl font-bold">{forecast.temperatura.toFixed(1)}°C</p>
                 </div>
