@@ -21,8 +21,14 @@ const SearchBar = ({ onSearch }) => {
               placeholder="Ciudad: (ej. Buenos Aires)"
               className="w-full px-2 md:px-4 py-2 bg-transparent text-gray-900 font-bold placeholder:text-gray-800 placeholder:text-sm md:placeholder:text-[17px] lg:placeholder:font-bold focus:outline-none focus:ring-0"
             />
-            <button type="submit" className="px-4 md:px-3 bg-orange-400 md:text-lg text-gray-800 xl:hover:bg-orange-500 ">
-              <FaSearch />
+            <button
+              type="submit"
+              disabled={query.trim() === ''}
+              className={`px-4 md:px-3 bg-orange-400 md:text-lg text-gray-800 xl:hover:bg-orange-500 ${
+                query.trim() === '' ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+            >             
+               <FaSearch />
             </button>
           </label>
         </form>
