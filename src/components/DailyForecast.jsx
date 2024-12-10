@@ -7,7 +7,7 @@ const DailyForecast = ({ weatherData }) => {
     return (
       <div className="lg:p-4 mt-4 md:mt-0 bg-transparent md:rounded-lg md:border border-gray-400">
         <h2 className="text-lg md:font-bold text-gray-100">Próximos días</h2>
-        <div className="flex flex-col">
+        <div className="px-2 md:px-0 flex flex-col bg-black md:bg-transparent bg-opacity-15">
           {Object.entries(weatherData.nextDaysForecast).map(([date, dayData], index, array) => {
             const temperatures = dayData.map((entry) => entry.temperatura);
             const minima = Math.min(...temperatures).toFixed(0);

@@ -53,7 +53,7 @@ const WeatherContainer = ({ cityName, setCityName }) => {
   }
 
   return (
-    <div className="md:w-[94%] lg:w-[1000px] pb-20 md:pb-0 mx-auto flex flex-col md:flex-row justify-between items-stretch gap-3 lg:gap-6 overflow-hidden">
+    <div className="md:w-[94%] lg:w-[1000px] pb-4 md:pb-0 mx-auto flex flex-col md:flex-row justify-between items-stretch gap-3 lg:gap-6 overflow-hidden">
       <div className="flex flex-col lg:justify-between flex-1">
         <CurrentWeather cityName={cityName} weatherData={weatherData} />
         <HourlyForecast weatherData={weatherData} />

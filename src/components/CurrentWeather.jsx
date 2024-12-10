@@ -7,7 +7,7 @@ const CurrentWeather = ({cityName, weatherData}) => {
 
   return (
       <div>
-        <div className="md:px-3 lg:px-4 py-2 lg:py-6 flex flex-col md:flex-row md:items-end justify-center md:justify-between bg-transparent rounded-lg md:border border-gray-400">
+        <div className="md:px-3 lg:px-4 md:py-6 flex flex-col md:flex-row md:items-end justify-center md:justify-between bg-transparent rounded-lg md:border border-gray-400">
             <h2 className="text-2xl lg:text-3xl font-normal text-gray-300 flex items-center"><FaMapMarkerAlt className='inline text-sm mr-1' />{cityName.toUpperCase()}, {weatherData.currentWeather.pais}</h2>
             <p className="text-sm text-gray-300 flex items-center"><FaRegClock className='inline text-sm mr-1'/><span className="text-2xl lg:text-3xl md:font-bold">{weatherData.currentWeather.horaActual}</span></p>
         </div>
@@ -40,7 +40,7 @@ const CurrentWeather = ({cityName, weatherData}) => {
                 </div>
             </div>
         </div>
-        <div className='mt-6 flex justify-center items-end gap-14 md:hidden'>
+        <div className='mt-2 flex justify-center items-end gap-14 md:hidden'>
             <div className='flex flex-col justify-center items-center'>
                 {weatherData.currentWeather.icon && (
                     <Image
