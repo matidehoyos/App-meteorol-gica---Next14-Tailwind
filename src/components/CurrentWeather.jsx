@@ -24,19 +24,19 @@ const CurrentWeather = ({cityName, weatherData}) => {
                         className='w-auto h-auto scale-150'
                     />
                     )}
-                    <p className="text-xs lg:text-sm">Amanecer: <span className="font-bold">{weatherData.currentWeather.amanecer}</span></p>
-                    <p className="text-xs lg:text-sm">Atardecer: <span className="font-bold">{weatherData.currentWeather.atardecer}</span></p>
+                    <p className="text-xs lg:text-sm text-gray-400">Amanecer: <span className="font-bold text-gray-100">{weatherData.currentWeather.amanecer}</span></p>
+                    <p className="text-xs lg:text-sm text-gray-400">Atardecer: <span className="font-bold text-gray-100">{weatherData.currentWeather.atardecer}</span></p>
                 </div>
                 <div className="flex flex-col items-start justify-center">
                     <p className="text-4xl lg:text-7xl font-bold text-yellow-400">{weatherData.currentWeather.temperatura}<span className="pl-2 text-3xl font-normal"></span></p>
-                    <p className="text-lg lg:text-xl font-semibold">{weatherData.currentWeather.descripcion}</p>
-                    <p className="text-xs lg:text-sm">S.Térmica: <span className="font-bold">{weatherData.currentWeather.termica}</span>°C</p>
+                    <p className="text-lg lg:text-xl font-semibold text-gray-100">{weatherData.currentWeather.descripcion}</p>
+                    <p className="text-xs lg:text-sm text-gray-400">S.Térmica: <span className="font-bold text-gray-100">{weatherData.currentWeather.termica}</span>°C</p>
                 </div>
                 <div className="flex flex-col items-start lg:gap-1 lg:relative top-1">
-                    <p className="lg:text-lg text-gray-200">Viento: <span className="font-bold text-white">{weatherData.currentWeather.velocidadViento}</span>Km/h</p>
-                    <p className="lg:text-lg text-gray-200">Lluvias: <span className="font-bold text-white">{weatherData.currentWeather.precipitaciones}</span>%</p>
-                    <p className="lg:text-lg text-gray-200">Nubosidad: <span className="font-bold text-white">{weatherData.currentWeather.nubosidad}</span>%</p>
-                    <p className="lg:text-lg text-gray-200">Visibilidad: <span className="font-bold text-white">{weatherData.currentWeather.visibilidad}</span>km</p>
+                    <p className="lg:text-lg text-gray-300">Viento: <span className="font-bold text-gray-100">{weatherData.currentWeather.velocidadViento}</span>Km/h</p>
+                    <p className="lg:text-lg text-gray-300">Lluvias: <span className="font-bold text-gray-100">{weatherData.currentWeather.precipitaciones}</span>%</p>
+                    <p className="lg:text-lg text-gray-300">Nubosidad: <span className="font-bold text-gray-100">{weatherData.currentWeather.nubosidad}</span>%</p>
+                    <p className="lg:text-lg text-gray-300">Visibilidad: <span className="font-bold text-gray-100">{weatherData.currentWeather.visibilidad}</span>km</p>
                 </div>
             </div>
         </div>
