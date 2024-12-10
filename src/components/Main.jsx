@@ -11,10 +11,21 @@ const Main = () => {
   };
 
   return (
-   <div className='w-full min-h-screen bg-gray-950'>
-      <NavBar onSearch={handleSearch} /> 
-      <WeatherContainer cityName={cityName} setCityName={setCityName} />
-    </div>
+<div
+  className="w-screen min-h-screen md:flex items-center justify-center"
+  style={{ 
+    backgroundImage: 'url(/bg1.jpeg)',
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+  }}>   
+      <div className='p-2 lg:p-4 bg-black bg-opacity-60 md:rounded-lg md:border md:border-gray-500' style={{
+        backdropFilter: 'blur(2px)',
+        WebkitBackdropFilter: 'blur(2px)',
+      }}>
+          <NavBar onSearch={handleSearch} /> 
+          <WeatherContainer cityName={cityName} setCityName={setCityName} />
+      </div>   
+  </div>
   );
 };
 

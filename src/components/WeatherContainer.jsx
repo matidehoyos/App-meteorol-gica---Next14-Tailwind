@@ -28,9 +28,10 @@ const WeatherContainer = ({ cityName, setCityName }) => {
     fetchWeatherData();
   }, [cityName]);
 
+
   if (loading) {
     return (
-      <div className="mt-40 flex flex-col items-center justify-center gap-6">
+      <div className="h-[calc(100vh-60px)] lg:h-[554px] flex flex-col items-center justify-center gap-6">
         <div className="w-16 h-16 border-4 border-yellow-300 border-dotted rounded-full animate-spin"></div>
         <p className="text-lg text-yellow-300 font-bold">Analizando el clima</p>
       </div>
@@ -39,7 +40,7 @@ const WeatherContainer = ({ cityName, setCityName }) => {
 
   if (error) {
     return (
-      <div className="mt-40 text-center">
+      <div className="w-[80%] mx-auto h-[calc(100vh-60px)] lg:h-[554px] flex flex-col items-center justify-center text-center">
         <p className="text-xl text-yellow-300">{error}</p>
         <button
           onClick={() => setCityName('Buenos Aires')}

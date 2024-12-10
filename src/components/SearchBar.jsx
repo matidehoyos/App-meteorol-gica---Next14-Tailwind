@@ -13,15 +13,15 @@ const SearchBar = ({ onSearch }) => {
   return (
     <div>
         <form onSubmit={handleSearch} className='w-full'>
-          <label htmlFor="" className='bg-gray-700 flex justify-between border border-gray-600 rounded-sm md:rounded-lg overflow-hidden'>
+          <label htmlFor="" className='bg-white bg-opacity-80 flex justify-between border border-white rounded-r-md md:rounded-lg overflow-hidden'>
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Ciudad: (ej. Londres)"
-              className="w-full px-2 md:px-4 py-2 bg-transparent placeholder:text-gray-200 placeholder:text-sm md:placeholder:text-md"
+              placeholder="Ciudad: (ej. Buenos Aires)"
+              className="w-full px-2 md:px-4 py-2 bg-transparent text-gray-900 font-bold placeholder:text-gray-800 placeholder:text-sm md:placeholder:text-[17px] lg:placeholder:font-bold focus:outline-none focus:ring-0"
             />
-            <button type="submit" className="px-2 md:px-3 bg-gray-800 md:text-lg text-gray-100 xl:hover:bg-gray-950">
+            <button type="submit" className="px-4 md:px-3 bg-orange-400 md:text-lg text-gray-800 xl:hover:bg-orange-500 ">
               <FaSearch />
             </button>
           </label>
