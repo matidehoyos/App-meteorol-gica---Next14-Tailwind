@@ -18,7 +18,7 @@ const Main = () => {
     backgroundSize: 'cover', 
     backgroundPosition: 'center', 
   }}>   
-      <div className='p-2 lg:p-4 bg-black bg-opacity-60 md:rounded-lg md:border md:border-gray-500' style={{
+      <div className='p-2 lg:p-4 bg-black bg-opacity-60 md:rounded-lg md:border md:border-orange-500' style={{
         backdropFilter: 'blur(2px)',
         WebkitBackdropFilter: 'blur(2px)',
       }}>
